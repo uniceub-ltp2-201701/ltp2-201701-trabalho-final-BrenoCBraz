@@ -92,6 +92,12 @@ if(!(u==null)){%>
 	<br>
 	
 	<table font-size:12px;>
+	<tr><td><% out.println(f.getClassificacao() + " anos"); %></td></tr>
+	</table>
+	
+	<br>
+	
+	<table font-size:12px;>
 	<tr><td><% out.println(f.getDuracao() + " minutos");%></td></tr>
 	</table>
 	
