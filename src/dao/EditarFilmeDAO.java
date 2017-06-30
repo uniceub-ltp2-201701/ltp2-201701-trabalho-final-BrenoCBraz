@@ -18,13 +18,13 @@ public class EditarFilmeDAO {
 		
 		try{
 			
-			ps = conexao.prepareStatement("update lokurafilmes.filme set titulo=?,genero=?,classificacao=?,avaliacao=?,duracao=?,sinopse=?, datalancamento=? where idfilme = ?");
+			ps = conexao.prepareStatement("update lokurafilmes.filme set titulo=?,sinopse=?,genero=?,classificacao=?,avaliacao=?,duracao=?,datalancamento=? where idfilme = ?");
 			ps.setString(1, titulo);
-			ps.setString(2, genero);
-			ps.setInt(3, classificacao);
-			ps.setDouble(4, avaliacao);
-			ps.setInt(5, duracao);
-			ps.setString(6, sinopse);
+			ps.setString(2, sinopse);
+			ps.setString(3, genero);
+			ps.setInt(4, classificacao);
+			ps.setDouble(5, avaliacao);
+			ps.setInt(6, duracao);
 			ps.setDate(7, datalancamento);
 			ps.setInt(8, idfilme);
 			
@@ -34,7 +34,7 @@ public class EditarFilmeDAO {
 			ps.close();
 			resultado = true;
 		}catch(Exception e){
-			
+		e.printStackTrace();	
 		}
 		
 		return resultado;

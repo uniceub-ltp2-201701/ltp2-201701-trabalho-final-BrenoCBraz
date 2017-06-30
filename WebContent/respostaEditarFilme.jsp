@@ -122,6 +122,7 @@ local{
   </form>
   
 </div>
+  	
   	<% String m = (String) request.getAttribute("mensagem");
 	if(m==null)
 		m = "";
